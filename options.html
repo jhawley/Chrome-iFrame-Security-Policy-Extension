@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>iframe sandbox options</title></head>
+<body>
+
+<h1>Default Sandbox Attribute Options</h1>
+<form>
+    <input type="checkbox" id="allow-forms" value="allow-forms">allow-forms (Re-enables form submission)<br />
+    <input type="checkbox" id="allow-pointer-lock" value="allow-pointer-lock">allow-pointer-lock (Re-enables APIs)<br />
+    <input type="checkbox" id="allow-popups" value="allow-popups">allow-popups (Re-enables popups)<br />
+    <input type="checkbox" id="allow-same-origin" value="allow-same-origin">allow-same-origin (Allows the iframe content to be treated as being from the same origin)<br />
+    <input type="checkbox" id="allow-scripts" value="allow-scripts">allow-scripts (Re-enables scripts)<br />
+    <input type="checkbox" id="allow-top-navigation" value="allow-top-navigation">allow-top-navigation (Allows the iframe content to navigate its top-level browsing context)
+</form>
+
+<div id="status"></div>
+<button id="save">Save</button><br />
+
+<h1>Host Whitelist</h1>
+<input id="add_top"></input><button id="add1">Add</button><br />
+<select name="top" id="top" multiple="multiple">
+    <option id="example">Add a regular expression (assume it will be surrounded by ^ $)</option>
+</select><br />
+<button id="remove1">Remove</button>
+<div id="status2"></div>
+
+<script src="options.js"></script>
+</body>
+</html>
