@@ -25,11 +25,11 @@ function save_options() {
 
 function restore_options() {
   chrome.storage.sync.get({
-    "allow-forms": false,
-    "allow-pointer-lock": false,
-    "allow-popups": false,
-    "allow-same-origin": false,
-    "allow-scripts": false,
+    "allow-forms": true,
+    "allow-pointer-lock": true,
+    "allow-popups": true,
+    "allow-same-origin": true,
+    "allow-scripts": true,
     "allow-top-navigation": false,
     "whitelist-top": []
   }, function(items) {
@@ -85,9 +85,6 @@ function save_top() {
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
-document.getElementById('add1').addEventListener('click',
-    add_top);
-document.getElementById('remove1').addEventListener('click',
-    remove_top);
+document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('add1').addEventListener('click', add_top);
+document.getElementById('remove1').addEventListener('click', remove_top);

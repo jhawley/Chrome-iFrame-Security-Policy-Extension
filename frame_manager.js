@@ -10,11 +10,11 @@ for(var i = 0; i<iframes.length; ++i) {
   iframes[i].setAttribute("sandbox","");
 }
 chrome.storage.sync.get({
-  "allow-forms": false,
-  "allow-pointer-lock": false,
-  "allow-popups": false,
-  "allow-same-origin": false,
-  "allow-scripts": false,
+  "allow-forms": true,
+  "allow-pointer-lock": true,
+  "allow-popups": true,
+  "allow-same-origin": true,
+  "allow-scripts": true,
   "allow-top-navigation": false,
   "whitelist-top": []
 }, function(items) {
